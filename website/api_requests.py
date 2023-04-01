@@ -13,5 +13,3 @@ def orders_check():
     data = probit.open_order()['data']
     return data
 
-print(balance_check())
-
