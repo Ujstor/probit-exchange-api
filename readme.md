@@ -1,6 +1,7 @@
 # **ProBit Global exchange API**
 
 1. Create api_credentials.py and add id = " " and secret = " " variables.
+2. Run main.py
 
 ## Expected output
 
