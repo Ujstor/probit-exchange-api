@@ -55,4 +55,3 @@ class Probit:
             return json.loads(response.text)
         except requests.exceptions.RequestException as e:
             raise e
-

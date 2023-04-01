@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block title %}ProBit API{% endblock %}
+
+{% block content %}
+<h1>Balance and Open orders</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Currency ID</th>
+        <th>Total</th>
+        <th>Available</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data2 %}
+      <tr>
+        <td>{{ item['currency_id'] }}</td>
+        <td>{{ item['total'] }}</td>
+        <td>{{ item['available'] }}</td>
+      </tr>
+      {% endfor %}
+
+<table>
+    <thead>
+      <tr>
+        <th>Market ID</th>
+        <th>Side</th>
+        <th>Quantity</th>
+        <th>Limit Price</th>
+        <th>Filled Cost</th>
+        <th>Filled Quantity</th>
+        <th>Open Quantity</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data1 %}
+      <tr>
+        <td>{{ item['market_id'] }}</td>
+        <td>{{ item['side'] }}</td>
+        <td>{{ item['quantity'] }}</td>
+        <td>{{ item['limit_price'] }}</td>
+        <td>{{ item['filled_cost'] }}</td>
+        <td>{{ item['filled_quantity'] }}</td>
+        <td>{{ item['open_quantity'] }}</td>
+        <td>{{ item['status'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
