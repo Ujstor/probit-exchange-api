@@ -1,50 +1,32 @@
 {% extends 'base.html' %} {% block title %}ProBit API{% endblock %}
 
 {% block content %}
-<h1>Balance and Open orders</h1>
-<table>
-    <thead>
-      <tr>
-        <th>Currency ID</th>
-        <th>Total</th>
-        <th>Available</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for item in data2 %}
-      <tr>
-        <td>{{ item['currency_id'] }}</td>
-        <td>{{ item['total'] }}</td>
-        <td>{{ item['available'] }}</td>
-      </tr>
-      {% endfor %}
-
-<table>
-    <thead>
-      <tr>
-        <th>Market ID</th>
-        <th>Side</th>
-        <th>Quantity</th>
-        <th>Limit Price</th>
-        <th>Filled Cost</th>
-        <th>Filled Quantity</th>
-        <th>Open Quantity</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for item in data1 %}
-      <tr>
-        <td>{{ item['market_id'] }}</td>
-        <td>{{ item['side'] }}</td>
-        <td>{{ item['quantity'] }}</td>
-        <td>{{ item['limit_price'] }}</td>
-        <td>{{ item['filled_cost'] }}</td>
-        <td>{{ item['filled_quantity'] }}</td>
-        <td>{{ item['open_quantity'] }}</td>
-        <td>{{ item['status'] }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<div class="d-flex flex-row justify-content-center align-items-center" style="height: 100px;">
+    <div class="p-2">
+        <h1 class="text-light" >Balance</h1>
+    </div>
+</div>
+<div class="container">
+    <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th>Currency ID</th>
+            <th>Total</th>
+            <th>Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in data1 %}
+          <tr>
+            <td>{{ item['currency_id'] }}</td>
+            <td>{{ item['total'] }}</td>
+            <td>{{ item['available'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</div>
+    <div style="height:560px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #1D2330;padding:1px;padding: 0px; margin: 0px; width: 100%;">
+       <div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div>
+    </div>
 {% endblock %}

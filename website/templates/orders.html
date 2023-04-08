@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block title %}ProBit API{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-row justify-content-center align-items-center" style="height: 100px;">
+    <div class="p-2">
+        <h1 class="text-light" >Open Orders</h1>
+    </div>
+</div>
+<div class="container">
+  <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>Market ID</th>
+          <th>Side</th>
+          <th>Quantity</th>
+          <th>Limit Price</th>
+          <th>Filled Cost</th>
+          <th>Filled Quantity</th>
+          <th>Open Quantity</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data2 %}
+        <tr>
+          <td>{{ item['market_id'] }}</td>
+          <td>{{ item['side'] }}</td>
+          <td>{{ item['quantity'] }}</td>
+          <td>{{ item['limit_price'] }}</td>
+          <td>{{ item['filled_cost'] }}</td>
+          <td>{{ item['filled_quantity'] }}</td>
+          <td>{{ item['open_quantity'] }}</td>
+          <td>{{ item['status'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+</div>
+<br>
+{% endblock %}
