@@ -11,7 +11,9 @@ Probit is primarily used for fat finger orders. In the event of market volatilit
 The tool is now used for order monitoring.
 
 ## Expected output
-![expected output](https://i.imgur.com/9v7IJGU.png)
+![expected output](https://i.imgur.com/VEfFNs9.png)
+
+![expected output](https://i.imgur.com/W1ox8l7.png)
 
 ![expected output](https://i.imgur.com/o5bGEo5.png)
 
