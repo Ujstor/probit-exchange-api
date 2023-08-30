@@ -1,7 +1,13 @@
 from website.api_auth import Probit
-from website.api_credentials import id, secret
+from dotenv import load_dotenv, find_dotenv
+import os
 
-probit = Probit(id, secret)
+load_dotenv(find_dotenv())
+
+ID = os.environ.get('ID')
+SECRET = os.environ.get('SECRET')
+
+probit = Probit(ID, SECRET)
 
 
 def balance_check():

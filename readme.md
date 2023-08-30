@@ -1,9 +1,14 @@
 # **ProBit Global exchange API**
 
 1. Clone git repo
-2. Add credentials in api_credentials
-3. Run in CMD main.py
-4. Open 127.0.0.1:5000 in local browser
+2. Create and add credentials in `.env` file
+    ```
+    ID=             #probit API id
+    SECRET=         #probit API secret
+    KEY=            #random string
+    ```
+3. Run `python main.py`
+4. Open `127.0.0.1:5000` in local browser
 
 
 Probit is primarily used for fat finger orders. In the event of market volatility and lack of liquidity, these extreme orders can be executed.
