@@ -35,3 +35,7 @@ The tool is now used for order monitoring.
 ![expected output](https://i.imgur.com/W1ox8l7.png)
 
 
+## Pytest
+To run tests, use `pytest -v -s` command.
+
+![](https://i.imgur.com/4Jr7WS3.png)
