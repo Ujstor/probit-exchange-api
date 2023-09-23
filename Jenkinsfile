@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout Code') {
       steps {
-        git(url: 'https://github.com/Ujstor/probit-exchange-api/', branch: 'jenkins')
+        git(url: 'https://github.com/Ujstor/probit-exchange-api/', branch: 'master')
       }
     }
 
