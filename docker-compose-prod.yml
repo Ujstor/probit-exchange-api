@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  probitapi:
+    image: ujstor/probitapi
+    ports:
+        - '5005:5005'
+    environment:
+        - KEY=${KEY}
+        - ID=${ID}
+        - SECRET=${SECRET}
