@@ -12,24 +12,32 @@
 
 4. Open `127.0.0.1:5000` in local browser
 
-## Docker
+# Docker
 
-Build and start the Docker containers using Docker Compose:
+To build the Docker image from the code, run:
 
-```bash
-docker compose up
+```
+docker compose -f .\docker-compose-dev.yml up
 ```
 
-Application deployment can be achieved using docker-compose and hosting on the cloud self-hosting service provided by [Collify](https://coolify.io/). An open-source & self-hostable Heroku / Netlify alternative.
-<br>
-<br>
+If you want to pull the image from the Docker repository instead, use:
 
+```
+docker compose -f .\docker-compose-prod.yml up
+```
+
+Iimage is automatically built and deployed through the Jenkins pipeline after changes in GitHub.
+
+<br/>
+
+![](https://i.imgur.com/tT99K2k.png)
+
+## Expected output
 
 Probit is primarily used for fat finger orders. In the event of market volatility and lack of liquidity, these extreme orders can be executed.
 
 The tool is now used for order monitoring.
 
-## Expected output
 ![expected output](https://i.imgur.com/VEfFNs9.png)
 
 ![expected output](https://i.imgur.com/W1ox8l7.png)
