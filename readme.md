@@ -30,7 +30,7 @@ Iimage is automatically built and deployed through the Jenkins pipeline after ch
 
 <br/>
 
-![]()
+![](https://i.imgur.com/tT99K2k.png)
 
 ## Expected output
 
