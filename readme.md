@@ -26,11 +26,15 @@ If you want to pull the image from the Docker repository instead, use:
 docker compose -f .\docker-compose-prod.yml up
 ```
 
-Iimage is automatically built and deployed through the Jenkins pipeline after changes in GitHub.
+Image is automatically built and deployed through the Jenkins pipeline after changes in GitHub, and it expects a .env file for loading variables.
 
 <br/>
 
 ![](https://i.imgur.com/tT99K2k.png)
+
+<br/>
+
+![](https://i.imgur.com/vAk7emp.png)
 
 ## Expected output
 
