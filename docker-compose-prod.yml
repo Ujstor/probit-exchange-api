@@ -2,7 +2,7 @@ version: '3'
 
 services:
   probitapi:
-    image: ujstor/probitapi
+    image: ujstor/probitapi:1.0.3
     ports:
         - '5005:5005'
     environment:

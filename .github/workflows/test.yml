@@ -5,12 +5,12 @@ on: [push, pull_request]
 jobs:
   build:
     environment:
-      name: testing
+      name: Test
     env:
       ID: ${{secrets.ID}}
       SECRET: ${{secrets.SECRET}}
       KEY: ${{secrets.KEY}}
-    
+
     runs-on: ubuntu-latest
     steps:
     - name: pulling git repo

@@ -30,11 +30,37 @@ Image is automatically built and deployed through the Jenkins pipeline after cha
 
 <br/>
 
-![](https://i.imgur.com/tT99K2k.png)
+![](https://i.imgur.com/e4OqvK9.png)
+
+# Jenkins Pipeline
+
+
+Pipeline is designed to automate the building and deployment of a Docker image for the Probit Exchange API. It is configured to execute different stages of the CI/CD process based on the branch being built. It assumes you have a specific versioning strategy for your application, denoted by "Patch," "Minor," and "Major."
+
+
+## Pipeline Execution Flow
+
+The pipeline is executed as follows:
+
+1. Code is checked out from the GitHub repository.
+2. The environment is prepared by copying the `.env` file.
+3. Tests are run.
+4. If the branch is 'master', a Docker image tag is generated.
+5. If the branch is 'master', a Docker image is built with the generated tag.
+6. If the branch is 'master', the Docker image is pushed to Docker Hub.
+7. If the branch is 'master', the Docker image is removed.
+
+## Execution Conditions
+
+The stages for image tagging, building, deploying, and environment cleanup are conditional and will only run when the branch being built is 'master'.
+
+Please ensure that you have the necessary plugins and tools set up in your Jenkins environment to support Docker and the required scripts for testing. Scripts are in [IaC Repo](https://github.com/Ujstor/k8s-infra/tree/master/jenkins/scripts)
+
+
+
 
 <br/>
 
-![](https://i.imgur.com/vAk7emp.png)
 
 ## Expected output
 
